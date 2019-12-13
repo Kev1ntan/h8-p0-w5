@@ -1,15 +1,7 @@
 //Logic Challenge - Hapus Simbol (Regex)
 console.log('Logic Challenge - Hapus Simbol (Regex)')
 function hapusSimbol(str) {
-	var hasil = '';
-	var numbers = /[0-9]/;
-	var words = /[a-z]/i;
-	for (let i = 0; i < str.length; i++) {
-		if (str.charAt(i).match(numbers) || str.charAt(i).match(words)) {
-			hasil = hasil + str.charAt(i);
-		}
-	}
-	return hasil
+	return str.match(/[0-9a-z]/g).join('')
 }
 
 // TEST CASES
